@@ -88,6 +88,12 @@ body main .container .container-form .cont-info-form .cont-card {
   box-shadow: -1px 8px 10px -3px rgba(0, 0, 0, 0.5);
   position: relative;
   /* Error */
+  /*Error states*/
+  /*Success states*/
+}
+body main .container .container-form .cont-info-form .cont-card .cont-input {
+  width: 100%;
+  height: auto;
 }
 body main .container .container-form .cont-info-form .cont-card .card-input {
   width: 100%;
@@ -105,17 +111,44 @@ body main .container .container-form .cont-info-form .cont-card .card-input:focu
   transition: none;
   outline: 1px solid #b9b6d3;
 }
-body main .container .container-form .cont-info-form .cont-card .error {
-  border: 2px solid red;
-}
-body main .container .container-form .cont-info-form .cont-card .success {
-  border: 2px solid green;
-}
-body main .container .container-form .cont-info-form .cont-card .img-error {
-  visibility: hidden;
+body main .container .container-form .cont-info-form .cont-card img {
   position: absolute;
-  right: 10px;
-  top: 15px;
+  right: 20px;
+  top: 29%;
+  visibility: hidden;
+}
+body main .container .container-form .cont-info-form .cont-card .message {
+  color: #ff7a7a;
+  font-size: 11px;
+  font-weight: 500;
+  position: absolute;
+  right: 0;
+  visibility: hidden;
+}
+body main .container .container-form .cont-info-form .cont-card .error small {
+  visibility: visible;
+  color: #ff7a7a;
+  position: absolute;
+  right: 0;
+  bottom: -18px;
+  font-size: 10px;
+}
+body main .container .container-form .cont-info-form .cont-card .error img {
+  visibility: visible;
+}
+body main .container .container-form .cont-info-form .cont-card .success small {
+  visibility: visible;
+  color: #38cc8c;
+  position: absolute;
+  right: 0;
+  bottom: -20px;
+  font-size: 10px;
+}
+body main .container .container-form .cont-info-form .cont-card .success input {
+  outline: 2px solid #38cc8c;
+}
+body main .container .container-form .cont-info-form .cont-card .cleanForm {
+  outline: none;
 }
 body main .container .container-form .cont-info-form .cont-card .inputSubmit {
   background-color: #38cc8c;
