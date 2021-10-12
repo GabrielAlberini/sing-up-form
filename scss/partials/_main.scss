@@ -1,10 +1,195 @@
+/*Global*/
+
 * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
     font-family: $fontFamilyPoppins;
+    position: relative;
+    transition: all .3s ease;
 }
 
-.attribution { 
-    font-size: 11px; text-align: center; 
+/*Body*/
+
+body {
+    background-image: url(../../images/bg-intro-desktop.png);
+    background-color: $colorRed;
+    main {
+        width: 100%;
+        height: auto;
+        padding: 8% 11%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .container {
+            max-width: 1440px;
+            width: 100%;
+            height: auto;
+            display: flex;
+            gap: 40px;
+            .cont-txt {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                .cont-info {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    align-items: center;
+                    .cont-txt-title {
+                        font-size: 48px;
+                        color: white;
+                        margin-bottom: 20px;
+                        line-height: 55px;
+                    }
+                    .cont-txt-txt {
+                        font-size: 15px;
+                        color: white;
+                    }
+                }
+            }
+            .container-form {
+                width: 100%;
+                height: auto;
+                display: flex;
+                align-items: center;
+                justify-self: center;
+                .cont-info-form {
+                    width: 100%;
+                    margin: auto;
+                    .cont-premium {
+                        width: 100%;
+                        height: 60px;
+                        color: $colorGrayishBlue;
+                        background-color: $colorBlue;
+                        font-size: 16px;
+                        margin-bottom: 20px;
+                        border-radius: 5px;
+                        outline: none;
+                        border: none;
+                        box-shadow: -1px 8px 10px -3px rgba(0,0,0,0.5);
+                        cursor: pointer;
+                        &:hover {
+                            background-color: $colorBlueHover;
+                        }
+                        span {
+                            color:white;
+                        }
+                    }
+                    .cont-card {
+                        background-color: white;
+                        padding: 20px 35px;
+                        border-radius: 5px;
+                        box-shadow: -1px 8px 10px -3px rgba(0,0,0,0.5);
+                        position: relative;
+                        .card-input {
+                            width: 100%;
+                            display: block;
+                            font-size: 13px;
+                            font-weight: 700;
+                            color: $colorDarkBlue;
+                            padding: 15px 25px;
+                            margin: 20px 0;
+                            border-radius: 5px;
+                            position: relative;
+                            border: 1px solid rgba(0, 0, 0, 0.116);
+                            &:focus {
+                                transition: none;
+                                outline: 1px solid $colorGrayishBlue;
+                            }   
+                        }
+                        /* Error */
+                        .error {
+                            border: 2px solid red;
+                        }
+                        .success {
+                            border: 2px solid green;
+                        }
+                        .img-error {
+                            visibility: hidden;
+                            position: absolute;
+                            right: 10px;
+                            top: 15px;
+                        }
+                        .inputSubmit {
+                            background-color: $colorGreen;
+                            outline: none;
+                            font-size: 15px;
+                            color: white;
+                            letter-spacing: 1px;
+                            border-bottom: 3px solid $colorGreenHover;
+                            &:hover {
+                                background-color: $colorGreenHover;
+                            }
+                        }
+                        .services {
+                            width: 100%;
+                            height: auto;
+                            text-align: center;
+                            font-size: 10px;
+                            color: $colorGrayishBlue;
+                            margin-bottom: 20px;
+                            .services-link {
+                                color: $colorRed;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    footer {
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        .attribution { 
+            font-size: 11px; text-align: center; 
+        }
+        .attribution a { 
+            color: hsl(228, 45%, 44%); 
+        }
+    }
 }
-.attribution a { 
-    color: hsl(228, 45%, 44%); 
+
+/* Medias Querys */
+
+@media screen and (max-width:375px) {
+    body {
+        background-image: url(../../images/bg-intro-mobile.png);
+        background-color: $colorRed;
+        height: auto;
+        .container {
+            display: flex;
+            flex-direction: column;
+            .cont-txt {
+                margin: 20% 0;
+                .cont-txt-title {
+                    font-size: 25px;
+                    line-height: 40px;
+                    text-align: center;
+                }
+                .cont-txt-txt {
+                    text-align: center;
+                }
+            }
+            .container-form {
+                align-self: center;
+                margin-bottom: 60px;  
+                .cont-info-form {
+                    width: 100%;
+                    .cont-premium {
+                        width: 100%;
+                        height: 90px;
+                        text-align: center;
+                    }
+                    .inputSubmit {
+                        font-size: 12px;
+                        width: 100%;
+                    }
+                }  
+            }
+        }
+    }
 }
